@@ -28,9 +28,11 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
+        working-directory: ./BAQDAD SHOP SYSTEM
         run: npm install
 
       - name: Build website
+        working-directory: ./BAQDAD SHOP SYSTEM
         run: npm run build
 
       - name: Setup GitHub Pages
@@ -39,7 +41,7 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./BAQDAD SHOP SYSTEM/dist
 
       - name: Deploy website
         uses: actions/deploy-pages@v4
