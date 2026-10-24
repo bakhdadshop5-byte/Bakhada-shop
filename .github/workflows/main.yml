@@ -2,7 +2,8 @@ name: Deploy BAQDAD SHOP
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -25,11 +26,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22'
 
-     - name: Install dependencies
-  working-directory: ./BAQDAD SHOP SYSTEM
-  run: npm install --legacy-peer-deps
+      - name: Install dependencies
+        working-directory: ./BAQDAD SHOP SYSTEM
+        run: npm install --legacy-peer-deps
 
       - name: Build website
         working-directory: ./BAQDAD SHOP SYSTEM
